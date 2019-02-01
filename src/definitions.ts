@@ -4,6 +4,27 @@ declare global {
   }
 }
 
+export interface GoogleLoginOptions {
+  serverAppId: string;
+  authorizationBaseUrl: string;
+  stateDisabled?: boolean;
+  scopes: string[];
+  state?: string;
+  web: {
+    appId?: string
+    redirectUrl: string;
+  },
+  ios: {
+    appId: string
+  }
+}
+
+export interface GoogleLoginResponse {
+  code?: string;
+  token?: string;
+  state?: string;
+}
+
 export interface GoogleLoginPlugin {
-  echo(options: { value: string }): Promise<{value: string}>;
+  authenticate(options: GoogleLoginOptions): Promise<GoogleLoginResponse>;
 }
