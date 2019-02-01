@@ -1,6 +1,6 @@
 {
   "name": "@enewbury/capacitor-google-login",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "Capacitor plugin to authenticate with google",
   "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -22,7 +22,7 @@
     "dist/",
     "ios/",
     "android/",
-    "CapacitorGoogleLogin.podspec"
+    "EnewburyCapacitorGoogleLogin.podspec"
   ],
   "keywords": [
     "capacitor",
