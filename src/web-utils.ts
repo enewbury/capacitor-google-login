@@ -5,7 +5,7 @@ export class WebUtils {
    * Public only for testing
    */
   static getAppId(options: GoogleLoginOptions): string {
-    let appId = options.appId;
+    let appId = options.serverAppId;
     if (options.web && options.web.appId && options.web.appId.length > 0) {
       appId = options.web.appId;
     }
@@ -24,8 +24,8 @@ export class WebUtils {
     if (options.web.redirectUrl) {
       baseUrl += '&redirect_uri=' + options.web.redirectUrl;
     }
-    if (options.scope) {
-      baseUrl += '&scope=' + options.scope;
+    if (options.scopes) {
+      baseUrl += '&scope=' + options.scopes.join(" ");
     }
 
     if (!options.stateDisabled) {

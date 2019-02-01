@@ -1,12 +1,14 @@
 import { WebPlugin } from '@capacitor/core';
-import { GoogleLoginPlugin } from './definitions';
+import { GoogleLoginOptions, GoogleLoginPlugin, GoogleLoginResponse } from './definitions';
 export declare class GoogleLoginWeb extends WebPlugin implements GoogleLoginPlugin {
+    private windowHandle;
+    private intervalId;
+    private loopCount;
+    private intervalLength;
     constructor();
-    echo(options: {
-        value: string;
-    }): Promise<{
-        value: string;
-    }>;
+    authenticate(options: GoogleLoginOptions): Promise<GoogleLoginResponse>;
+    private processResponse;
+    private closeWindow;
 }
 declare const GoogleLogin: GoogleLoginWeb;
 export { GoogleLogin };
