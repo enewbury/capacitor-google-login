@@ -1,6 +1,7 @@
 node_modules/
 .DS_Store
 .idea/
+dist
 ios/Plugin/Pods/
 ios/Plugin/Plugin.xcodeproj/xcuserdata/sakakibara.xcuserdatad/xcschemes/xcschememanagement.plist
 ios/Plugin/Plugin.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
