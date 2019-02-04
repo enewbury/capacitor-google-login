@@ -52,7 +52,7 @@ export class GoogleLoginWeb extends WebPlugin {
     }
     processResponse(urlParamObj, href, options, resolve, reject) {
         clearInterval(this.intervalId);
-        if (options.stateDisabled || urlParamObj.state === options.state) {
+        if (options.web.stateDisabled || urlParamObj.state === options.web.state) {
             if (href.match(/code=(.*)/)) {
                 const code = urlParamObj.code;
                 if (code) {

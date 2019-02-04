@@ -1,6 +1,8 @@
 node_modules/
 .DS_Store
 .idea/
+**/*.iml
+android/build
 dist
 ios/Plugin/Pods/
 ios/Plugin/Plugin.xcodeproj/xcuserdata/sakakibara.xcuserdatad/xcschemes/xcschememanagement.plist

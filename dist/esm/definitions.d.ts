@@ -5,13 +5,13 @@ declare global {
 }
 export interface GoogleLoginOptions {
     serverAppId: string;
-    authorizationBaseUrl: string;
-    stateDisabled?: boolean;
     scopes: string[];
-    state?: string;
     web: {
         appId?: string;
+        authorizationBaseUrl: string;
         redirectUrl: string;
+        state?: string;
+        stateDisabled?: boolean;
     };
     ios: {
         appId: string;
