@@ -43,7 +43,7 @@ public class GoogleLogin: CAPPlugin, GIDSignInDelegate {
         let iosAppId = iosConfig["appId"] as? String
         GIDSignIn.sharedInstance().clientID = iosAppId
         GIDSignIn.sharedInstance().serverClientID = call.getString("serverAppId")
-        GIDSignIn.sharedInstance().scopes = call.getArray("scopes", String.self)
+        GIDSignIn.sharedInstance().scopes = ["email", "profile"]
         
         GIDSignIn.sharedInstance().signIn()
     }

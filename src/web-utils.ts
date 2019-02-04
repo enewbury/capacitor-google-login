@@ -17,23 +17,21 @@ export class WebUtils {
    */
   static getAuthorizationUrl(options: GoogleLoginOptions): string {
     const appId = this.getAppId(options);
-    let baseUrl = options.authorizationBaseUrl + '?client_id=' + appId;
+    let baseUrl = options.web.authorizationBaseUrl + '?client_id=' + appId;
 
     baseUrl += '&response_type=code';
 
     if (options.web.redirectUrl) {
       baseUrl += '&redirect_uri=' + options.web.redirectUrl;
     }
-    if (options.scopes) {
-      baseUrl += '&scope=' + options.scopes.join(" ");
-    }
+    baseUrl += '&scope=email profile';
 
-    if (!options.stateDisabled) {
-      if (!options.state || options.state.length === 0) {
-        options.state = this.randomString();
+    if (!options.web.stateDisabled) {
+      if (!options.web.state || options.web.state.length === 0) {
+        options.web.state = this.randomString();
       }
 
-      baseUrl += '&state=' + options.state;
+      baseUrl += '&state=' + options.web.state;
     }
     console.log(baseUrl);
     baseUrl = encodeURI(baseUrl);
