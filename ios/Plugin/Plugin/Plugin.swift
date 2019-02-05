@@ -38,13 +38,14 @@ public class GoogleLogin: CAPPlugin, GIDSignInDelegate {
 
     @objc func authenticate(_ call: CAPPluginCall) {
         self.savedLastCall = call
-        
+
         let iosConfig = call.getObject("ios") ?? [:]
         let iosAppId = iosConfig["appId"] as? String
         GIDSignIn.sharedInstance().clientID = iosAppId
         GIDSignIn.sharedInstance().serverClientID = call.getString("serverAppId")
         GIDSignIn.sharedInstance().scopes = ["email", "profile"]
-        
+
         GIDSignIn.sharedInstance().signIn()
+        print("called signin")
     }
 }
