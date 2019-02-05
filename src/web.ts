@@ -14,10 +14,10 @@ export class GoogleLoginWeb extends WebPlugin implements GoogleLoginPlugin {
       name: 'GoogleLogin',
       platforms: ['web']
     });
+    this.loadSdk();
   }
 
-  load() {
-    this.loaded = true;
+  loadSdk() {
     window.googleAsyncInit = () => {
       console.log('Init Google JS SDK');
       gapi.load('auth2', () => {

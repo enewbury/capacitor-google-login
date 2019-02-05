@@ -1,6 +1,6 @@
 {
   "name": "@enewbury/capacitor-google-login",
-  "version": "1.0.0-beta.3.1",
+  "version": "1.0.0-beta.3.2",
   "description": "Capacitor plugin to authenticate with google",
   "main": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
