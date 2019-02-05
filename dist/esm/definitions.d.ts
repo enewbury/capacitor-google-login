@@ -8,10 +8,6 @@ export interface GoogleLoginOptions {
     scopes: string[];
     web: {
         appId?: string;
-        authorizationBaseUrl: string;
-        redirectUrl: string;
-        state?: string;
-        stateDisabled?: boolean;
     };
     ios: {
         appId: string;

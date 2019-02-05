@@ -17,6 +17,7 @@ export class GoogleLoginWeb extends WebPlugin implements GoogleLoginPlugin {
   }
 
   load() {
+    this.loaded = true;
     window.googleAsyncInit = () => {
       console.log('Init Google JS SDK');
       gapi.load('auth2', () => {

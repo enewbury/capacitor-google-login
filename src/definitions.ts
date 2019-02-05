@@ -7,7 +7,7 @@ declare global {
 export interface GoogleLoginOptions {
   serverAppId: string;
   scopes: string[];
-  web: {
+  web?: {
     appId?: string
   },
   ios: {
