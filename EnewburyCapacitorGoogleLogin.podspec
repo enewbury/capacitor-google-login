@@ -1,7 +1,7 @@
 
   Pod::Spec.new do |s|
     s.name = 'EnewburyCapacitorGoogleLogin'
-    s.version = '1.0.0-beta.3.3'
+    s.version = '1.0.0-beta.3.4'
     s.summary = 'Capacitor plugin to authenticate with google'
     s.license = 'MIT'
     s.homepage = 'https://github.com/enewbury/capacitor-google-login.git'
