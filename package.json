@@ -13,7 +13,7 @@
   "author": "Eric Newbury",
   "license": "MIT",
   "dependencies": {
-    "@capacitor/core": "1.0.0-beta.13"
+    "@capacitor/core": "1.0.0-beta.17"
   },
   "devDependencies": {
     "typescript": "^2.6.2"
