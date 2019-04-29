@@ -1,3 +1,3 @@
 # capacitor-google-login
 
-This is an Work in progress that should not be used in production.
+This is an untested repo, use at your own risk.
